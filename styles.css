@@ -1,0 +1,15 @@
+:root {
+  background: #D79B41;
+  --main-text: #000000;
+}
+
+body {
+  background-color: #D79B41;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  color: #000000;
+}
