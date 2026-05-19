@@ -51,7 +51,7 @@ body {
 
 /*---LANDING PAGE---*/
 .hero {
-  background-color: var(--bg-dark);
+  background-color: var(--light);
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -61,6 +61,8 @@ body {
   width: 100%;
   scroll-snap-align: start;
   scroll-snap-stop: always;
+  border-top: 10px solid var(--main);
+  border-bottom: 10px solid var(--main);
 }
 
 h1 {
@@ -68,16 +70,16 @@ h1 {
   font-family: "Spectral", serif;
   font-weight: 800;
   font-style: normal;
-  font-size: 10em;
 }
 
 .italic {
   font-style: italic;
+  color: var(--main);
 }
 
 h1.main {
   text-align: center;
-  color: var(--main);
+  color: var(--main-text);
   font-size: 8vw;
   line-height: 1.2;
 }
@@ -117,6 +119,11 @@ h1.main {
   flex-direction: column;
   position: relative;
   background-color: var(--light);
+}
+
+a{
+  color: var(--main);
+  text-decoration: none;
 }
 
 h2 {
@@ -192,7 +199,7 @@ body.main {
 
 /*---IMAGE BOX---*/
 .bleed-images {
-  background-color: var(--bg-dark);
+  background-color: var(--light);
   height: 100vh;
   display: flex;
   align-items: flex-end;
@@ -216,9 +223,27 @@ body.main {
 figcaption {
   font-family: "Spectral", serif;
   font-size: 1em;
-  color: var(--light);
-  text-align: center;
+  color: var(--main-text);
+  text-align: left;
   margin: 20px;
   font-style: italic;
   z-index: 101;
+}
+
+.side-images {
+  background-color: var(--light);
+  height: 100vh;
+  display: grid;
+  position: relative;
+  z-index: 100;
+  width: 100%;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.side-images img {
+  max-width: 70%;
+  max-height: 70%;
+  width: auto;
+  height: auto;
 }
