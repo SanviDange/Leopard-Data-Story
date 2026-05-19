@@ -51,7 +51,7 @@ body {
 
 /*---LANDING PAGE---*/
 .hero {
-  background-color: var(--main-text);
+  background-color: var(--bg-dark);
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -192,21 +192,33 @@ body.main {
 
 /*---IMAGE BOX---*/
 .bleed-images {
-  background-color: #000000;
+  background-color: var(--bg-dark);
   height: 100vh;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   position: relative;
   z-index: 100;
   width: 100%;
-  overflow: hidden;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
 
 .bleed-images img {
   max-width: 100%;
   max-height: 100%;
-  object-fit: contain;
+  align-self: flex-start;
+  object-fit: cover;
   width: auto;
   height: auto;
+}
+
+figcaption {
+  font-family: "Spectral", serif;
+  font-size: 1em;
+  color: var(--light);
+  text-align: center;
+  margin: 20px;
+  font-style: italic;
+  z-index: 101;
 }
